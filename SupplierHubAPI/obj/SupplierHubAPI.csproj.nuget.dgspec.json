@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/silvv/repos/supplier-hub-back/SupplierHubAPI/SupplierHubAPI.csproj": {}
+    "C:\\silvana_repos\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj": {}
   },
   "projects": {
-    "/Users/silvv/repos/supplier-hub-back/SupplierHubAPI/SupplierHubAPI.csproj": {
+    "C:\\silvana_repos\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/silvv/repos/supplier-hub-back/SupplierHubAPI/SupplierHubAPI.csproj",
+        "projectUniqueName": "C:\\silvana_repos\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj",
         "projectName": "SupplierHubAPI",
-        "projectPath": "/Users/silvv/repos/supplier-hub-back/SupplierHubAPI/SupplierHubAPI.csproj",
-        "packagesPath": "/Users/silvv/.nuget/packages/",
-        "outputPath": "/Users/silvv/repos/supplier-hub-back/SupplierHubAPI/obj/",
+        "projectPath": "C:\\silvana_repos\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj",
+        "packagesPath": "C:\\Users\\ZARAHÍ GUEVARA\\.nuget\\packages\\",
+        "outputPath": "C:\\silvana_repos\\supplier-hub-back\\SupplierHubAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/silvv/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ZARAHÍ GUEVARA\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -47,6 +47,16 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.2, )"
             }
           },
           "imports": [
@@ -68,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
