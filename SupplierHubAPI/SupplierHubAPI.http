@@ -1,0 +1,6 @@
+@SupplierHubAPI_HostAddress = http://localhost:5201
+
+GET {{SupplierHubAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
