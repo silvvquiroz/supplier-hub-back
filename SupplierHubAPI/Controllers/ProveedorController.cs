@@ -20,8 +20,8 @@ namespace SupplierHubAPI.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        // GET: api/Proveedor
-        [HttpGet]
+        // GET: api/Proveedor/all
+        [HttpGet("all")]
         public async Task<ActionResult<IEnumerable<Proveedor>>> GetProveedores()
         {
             var proveedoresActivos = await _context.Proveedores.Where(p => p.Activo).ToListAsync();
