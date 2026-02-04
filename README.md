@@ -17,6 +17,8 @@ Este backend ha sido desplegado en producción mediante los siguientes servicios
 - **Azure App Services**: aloja la aplicación SupplierHubAPI. El servicio de aplicación gestiona la ejecución, escalado automático y monitoreo de la API.
 - **Azure SQL Database**: base de datos relacional SQL Server administrada que almacena los datos de proveedores y configuración.
 
+URL base de producción: https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net
+
 Consideraciones de despliegue:
 - Las migraciones de Entity Framework Core se aplican durante el proceso de despliegue o antes del arranque de la aplicación.
 - Las cadenas de conexión y credenciales sensibles se configuran mediante variables de entorno en Azure App Services (Configuration settings / Connection strings).
