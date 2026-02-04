@@ -24,7 +24,7 @@ namespace SupplierHubAPI.Controllers
 
             try
             {
-                var response = await client.GetAsync("https://restcountries.com/v3.1/all");
+                var response = await client.GetAsync("https://restcountries.com/v3.1/all?fields=name");
 
                 if (!response.IsSuccessStatusCode)
                 {
