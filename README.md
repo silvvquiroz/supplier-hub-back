@@ -10,6 +10,19 @@ Principales responsabilidades
 - Proveer endpoints helper para obtener la lista de países y consultas a servicios externos (ScrapX: OFAC y Offshore).
 - Persistencia de datos con Entity Framework Core y migraciones.
 
+Despliegue en Azure
+-------------------
+Este backend ha sido desplegado en producción mediante los siguientes servicios de Microsoft Azure:
+
+- **Azure App Services**: aloja la aplicación SupplierHubAPI. El servicio de aplicación gestiona la ejecución, escalado automático y monitoreo de la API.
+- **Azure SQL Database**: base de datos relacional SQL Server administrada que almacena los datos de proveedores y configuración.
+
+Consideraciones de despliegue:
+- Las migraciones de Entity Framework Core se aplican durante el proceso de despliegue o antes del arranque de la aplicación.
+- Las cadenas de conexión y credenciales sensibles se configuran mediante variables de entorno en Azure App Services (Configuration settings / Connection strings).
+- Se mantienen backups automáticos de Azure SQL Database según la política de retención configurada.
+
+
 Estructura relevante del proyecto
 ---------------------------------
 - Controladores: [SupplierHubAPI/Controllers/ProveedorController.cs](SupplierHubAPI/Controllers/ProveedorController.cs) y [SupplierHubAPI/Controllers/HelperController.cs](SupplierHubAPI/Controllers/HelperController.cs)
