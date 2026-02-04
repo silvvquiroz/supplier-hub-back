@@ -3,9 +3,12 @@ using SupplierHubAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar el DbContext para usar SQL server
+// Obtener la cadena de conexión desde las variables de entorno de Azure
+var dbConnectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
+
+// Configurar el DbContext para usar SQL Server con la cadena de conexión desde las variables de entorno
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(dbConnectionString));
 
 // Configurar la API externa para las consultas a las listas de riesgo
 builder.Services.AddControllers();
