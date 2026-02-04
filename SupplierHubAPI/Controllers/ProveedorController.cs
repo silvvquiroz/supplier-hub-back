@@ -89,8 +89,7 @@ namespace SupplierHubAPI.Controllers
         [HttpGet("{name}")]
         public async Task<ActionResult<Proveedor>> GetProveedor(string name)
         {
-            var proveedor = await _context.Proveedores.FirstOrDefaultAsync(p => p.RazonSocial == name);
-
+            var proveedor = await _context.Proveedores.FirstOrDefaultAsync(p => p.RazonSocial.Contains(name));
             if (proveedor == null)
             {
                 return NotFound();
