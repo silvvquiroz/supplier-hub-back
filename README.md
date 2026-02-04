@@ -112,6 +112,3 @@ Buenas prácticas
 - Configurar `HttpClient` y tiempos de espera para llamadas externas.
 - Ejecutar migraciones en entornos controlados antes de abrir la API en producción.
 
-Contacto
---------
-Para dudas sobre el backend o la API revisar los controladores en [SupplierHubAPI/Controllers](SupplierHubAPI/Controllers) o contactar con el equipo de desarrollo.
