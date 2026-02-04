@@ -27,6 +27,45 @@ namespace SupplierHubAPI.Controllers
             return proveedoresActivos;
         }
 
+        // GET: api/Proveedor?page=1&pageSize=10
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Proveedor>>> GetProveedores(int page = 1, int pageSize = 10)
+        {
+            // Verificar que los parámetros son válidos
+            if (page <= 0) page = 1;
+            if (pageSize <= 0) pageSize = 10;
+
+            // Calculamos el número de proveedores a omitir (paginación)
+            var skip = (page - 1) * pageSize;
+
+            // Obtener proveedores activos de manera paginada
+            var proveedoresPaginados = await _context.Proveedores
+                .Where(p => p.Activo)
+                .Skip(skip)
+                .Take(pageSize)
+                .ToListAsync();
+
+            // Obtener el total de proveedores activos (para calcular el número total de páginas)
+            var totalProveedores = await _context.Proveedores
+                .Where(p => p.Activo)
+                .CountAsync();
+
+            // Calcular el número total de páginas
+            var totalPages = (int)Math.Ceiling(totalProveedores / (double)pageSize);
+
+            // Crear un objeto para devolver los resultados junto con la información de paginado
+            var result = new
+            {
+                TotalProveedores = totalProveedores,
+                TotalPages = totalPages,
+                CurrentPage = page,
+                Proveedores = proveedoresPaginados
+            };
+
+            return Ok(result);
+        }
+
+
         // GET: api/Proveedor/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Proveedor>> GetProveedor(int id)
