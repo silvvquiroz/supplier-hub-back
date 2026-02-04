@@ -5,6 +5,8 @@ using Newtonsoft.Json;
 
 namespace SupplierHubAPI.Controllers
 {
+
+    // Controller para definir los endpoints de proveedores
     [Route("api/[controller]")]
     [ApiController]
     public class ProveedorController : ControllerBase

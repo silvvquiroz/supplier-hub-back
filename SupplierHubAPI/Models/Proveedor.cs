@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SupplierHubAPI.Models
 {
+    // Clase modelo para la entidad Proveedor
     public class Proveedor
     {
         public int Id { get; set; }

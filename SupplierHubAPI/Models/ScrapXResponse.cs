@@ -1,5 +1,6 @@
 namespace SupplierHubAPI.Models
 {
+    // Modelo de datos para la respuesta de cada una de las fuentes
     public class ScrapXResponse<T>
     {
         public int Code {get; set; }
