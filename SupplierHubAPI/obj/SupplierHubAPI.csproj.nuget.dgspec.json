@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\silvana_repos\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj": {}
+    "C:\\Repositorios\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj": {}
   },
   "projects": {
-    "C:\\silvana_repos\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj": {
+    "C:\\Repositorios\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\silvana_repos\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj",
+        "projectUniqueName": "C:\\Repositorios\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj",
         "projectName": "SupplierHubAPI",
-        "projectPath": "C:\\silvana_repos\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj",
-        "packagesPath": "C:\\Users\\ZARAHÍ GUEVARA\\.nuget\\packages\\",
-        "outputPath": "C:\\silvana_repos\\supplier-hub-back\\SupplierHubAPI\\obj\\",
+        "projectPath": "C:\\Repositorios\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj",
+        "packagesPath": "C:\\Users\\squiroz.PCI\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\supplier-hub-back\\SupplierHubAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ZARAHÍ GUEVARA\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\squiroz.PCI\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
