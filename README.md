@@ -112,3 +112,9 @@ Buenas prácticas
 - Configurar `HttpClient` y tiempos de espera para llamadas externas.
 - Ejecutar migraciones en entornos controlados antes de abrir la API en producción.
 
+Colección Postman
+-----------------
+Se incluye una colección de Postman para facilitar pruebas y demostraciones de uso de la API. Para mayor referencia y para probar los endpoints use la colección `SupplierHub.postman_collection.json` incluida en el repositorio.
+
+Archivo de la colección: [SupplierHub.postman_collection.json](SupplierHub.postman_collection.json)
+

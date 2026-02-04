@@ -1,0 +1,503 @@
+{
+  "info": {
+    "_postman_id": "5fd142c7-a4e6-4602-b564-a9a25dc93dde",
+    "name": "SupplierHub",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49810004",
+    "_collection_link": "https://go.postman.co/collection/49810004-5fd142c7-a4e6-4602-b564-a9a25dc93dde?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET all suppliers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/proveedor/all",
+          "protocol": "https",
+          "host": [
+            "supplier-hub-api-fha8daf4g7gzdhag",
+            "spaincentral-01",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "proveedor",
+            "all"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GET all suppliers",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/proveedor/all",
+              "protocol": "https",
+              "host": [
+                "supplier-hub-api-fha8daf4g7gzdhag",
+                "spaincentral-01",
+                "azurewebsites",
+                "net"
+              ],
+              "path": [
+                "api",
+                "proveedor",
+                "all"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 04 Feb 2026 15:57:52 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 1,\n        \"razonSocial\": \"Proveedor XYZ S.A.\",\n        \"nombreComercial\": \"Proveedor XYZ\",\n        \"identificacionTributaria\": \"12345678901\",\n        \"numeroTelefonico\": \"+34 123 456 789\",\n        \"correoElectronico\": \"contacto@proveedorxyz.com\",\n        \"sitioWeb\": \"https://www.proveedorxyz.com\",\n        \"direccionFisica\": \"Calle Falsa 123, Madrid, España\",\n        \"pais\": \"España\",\n        \"facturacionAnual\": 1000000.5,\n        \"fechaUltimaEdicion\": \"2026-02-04T13:49:53.0559007\",\n        \"activo\": true\n    },\n    {\n        \"id\": 4,\n        \"razonSocial\": \"TALIB AND SONS PTY LTD\",\n        \"nombreComercial\": \"Talib and Sons\",\n        \"identificacionTributaria\": \"34567890123\",\n        \"numeroTelefonico\": \"+61 3 1234 5678\",\n        \"correoElectronico\": \"contact@talibandsons.com\",\n        \"sitioWeb\": \"https://www.talibandsons.com\",\n        \"direccionFisica\": \"21 Anthony Dr\",\n        \"pais\": \"Australia\",\n        \"facturacionAnual\": 12000000,\n        \"fechaUltimaEdicion\": \"2026-02-04T14:10:00.2263828\",\n        \"activo\": true\n    },\n    {\n        \"id\": 7,\n        \"razonSocial\": \"TREN DE ARAGUA\",\n        \"nombreComercial\": \"Tren de Aragua\",\n        \"identificacionTributaria\": \"67890123456\",\n        \"numeroTelefonico\": \"+591 2 123 4567\",\n        \"correoElectronico\": \"info@trendearagua.com\",\n        \"sitioWeb\": \"https://www.trendearagua.com\",\n        \"direccionFisica\": null,\n        \"pais\": \"Bolivia\",\n        \"facturacionAnual\": 5000000,\n        \"fechaUltimaEdicion\": \"2026-02-04T14:10:52.2669214\",\n        \"activo\": true\n    },\n    {\n        \"id\": 8,\n        \"razonSocial\": \"Constructor Development Limited\",\n        \"nombreComercial\": \"Constructor Development\",\n        \"identificacionTributaria\": \"12345678901\",\n        \"numeroTelefonico\": \"+1 284 123 4567\",\n        \"correoElectronico\": \"contacto@constructor.com\",\n        \"sitioWeb\": \"https://www.constructor.com\",\n        \"direccionFisica\": \"British Virgin Islands\",\n        \"pais\": \"British Virgin Islands\",\n        \"facturacionAnual\": 15000000,\n        \"fechaUltimaEdicion\": \"2026-02-04T15:17:56.2313067\",\n        \"activo\": true\n    },\n    {\n        \"id\": 9,\n        \"razonSocial\": \"CAR CARE CENTER COMPANY\",\n        \"nombreComercial\": \"Car Care Center\",\n        \"identificacionTributaria\": \"23456789012\",\n        \"numeroTelefonico\": \"+961 1 234 567\",\n        \"correoElectronico\": \"info@carcarecenter.com\",\n        \"sitioWeb\": \"https://www.carcarecenter.com\",\n        \"direccionFisica\": \"Hadeth Kafaat, Hadi Nasrallah Highway\",\n        \"pais\": \"Lebanon\",\n        \"facturacionAnual\": 2500000,\n        \"fechaUltimaEdicion\": \"2026-02-04T15:18:32.7398929\",\n        \"activo\": true\n    },\n    {\n        \"id\": 10,\n        \"razonSocial\": \"EUROPEAN TECHNICAL TRADING\",\n        \"nombreComercial\": \"European Trading\",\n        \"identificacionTributaria\": \"45678901234\",\n        \"numeroTelefonico\": \"+32 2 123 4567\",\n        \"correoElectronico\": \"sales@europeantrading.com\",\n        \"sitioWeb\": \"https://www.europeantrading.com\",\n        \"direccionFisica\": \"24; Booiebos\",\n        \"pais\": \"Belgium\",\n        \"facturacionAnual\": 18000000,\n        \"fechaUltimaEdicion\": \"2026-02-04T15:18:54.4077823\",\n        \"activo\": true\n    },\n    {\n        \"id\": 11,\n        \"razonSocial\": \"GRIB DIAMONDS\",\n        \"nombreComercial\": \"Grib Diamonds\",\n        \"identificacionTributaria\": \"56789012345\",\n        \"numeroTelefonico\": \"+32 3 123 4567\",\n        \"correoElectronico\": \"contact@gribdiamonds.com\",\n        \"sitioWeb\": \"https://www.gribdiamonds.com\",\n        \"direccionFisica\": \"Schupstraat 21\",\n        \"pais\": \"Belgium\",\n        \"facturacionAnual\": 10000000,\n        \"fechaUltimaEdicion\": \"2026-02-04T15:19:09.6096047\",\n        \"activo\": true\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "GET all suppliers with page",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/proveedor?page=1&pageSize=3",
+          "protocol": "https",
+          "host": [
+            "supplier-hub-api-fha8daf4g7gzdhag",
+            "spaincentral-01",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "proveedor"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pageSize",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GET all suppliers with page",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/proveedor?page=1&pageSize=3",
+              "protocol": "https",
+              "host": [
+                "supplier-hub-api-fha8daf4g7gzdhag",
+                "spaincentral-01",
+                "azurewebsites",
+                "net"
+              ],
+              "path": [
+                "api",
+                "proveedor"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "3"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 04 Feb 2026 15:57:58 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"totalProveedores\": 7,\n    \"totalPages\": 3,\n    \"currentPage\": 1,\n    \"proveedores\": [\n        {\n            \"id\": 1,\n            \"razonSocial\": \"Proveedor XYZ S.A.\",\n            \"nombreComercial\": \"Proveedor XYZ\",\n            \"identificacionTributaria\": \"12345678901\",\n            \"numeroTelefonico\": \"+34 123 456 789\",\n            \"correoElectronico\": \"contacto@proveedorxyz.com\",\n            \"sitioWeb\": \"https://www.proveedorxyz.com\",\n            \"direccionFisica\": \"Calle Falsa 123, Madrid, España\",\n            \"pais\": \"España\",\n            \"facturacionAnual\": 1000000.5,\n            \"fechaUltimaEdicion\": \"2026-02-04T13:49:53.0559007\",\n            \"activo\": true\n        },\n        {\n            \"id\": 4,\n            \"razonSocial\": \"TALIB AND SONS PTY LTD\",\n            \"nombreComercial\": \"Talib and Sons\",\n            \"identificacionTributaria\": \"34567890123\",\n            \"numeroTelefonico\": \"+61 3 1234 5678\",\n            \"correoElectronico\": \"contact@talibandsons.com\",\n            \"sitioWeb\": \"https://www.talibandsons.com\",\n            \"direccionFisica\": \"21 Anthony Dr\",\n            \"pais\": \"Australia\",\n            \"facturacionAnual\": 12000000,\n            \"fechaUltimaEdicion\": \"2026-02-04T14:10:00.2263828\",\n            \"activo\": true\n        },\n        {\n            \"id\": 7,\n            \"razonSocial\": \"TREN DE ARAGUA\",\n            \"nombreComercial\": \"Tren de Aragua\",\n            \"identificacionTributaria\": \"67890123456\",\n            \"numeroTelefonico\": \"+591 2 123 4567\",\n            \"correoElectronico\": \"info@trendearagua.com\",\n            \"sitioWeb\": \"https://www.trendearagua.com\",\n            \"direccionFisica\": null,\n            \"pais\": \"Bolivia\",\n            \"facturacionAnual\": 5000000,\n            \"fechaUltimaEdicion\": \"2026-02-04T14:10:52.2669214\",\n            \"activo\": true\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "POST new supplier",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\n    \"razonSocial\": \"TREN DE ARAGUA\",\n    \"nombreComercial\": \"Tren de Aragua\",\n    \"identificacionTributaria\": \"67890123456\",\n    \"numeroTelefonico\": \"+591 2 123 4567\",\n    \"correoElectronico\": \"info@trendearagua.com\",\n    \"sitioWeb\": \"https://www.trendearagua.com\",\n    \"pais\": \"Bolivia\",\n    \"facturacionAnual\": 5000000.00\n  }\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/proveedor",
+          "protocol": "https",
+          "host": [
+            "supplier-hub-api-fha8daf4g7gzdhag",
+            "spaincentral-01",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "proveedor"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "POST new supplier",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"razonSocial\": \"GRIB DIAMONDS\",\n    \"nombreComercial\": \"Grib Diamonds\",\n    \"identificacionTributaria\": \"56789012345\",\n    \"numeroTelefonico\": \"+32 3 123 4567\",\n    \"correoElectronico\": \"contact@gribdiamonds.com\",\n    \"sitioWeb\": \"https://www.gribdiamonds.com\",\n    \"direccionFisica\": \"Schupstraat 21\",\n    \"pais\": \"Belgium\",\n    \"facturacionAnual\": 10000000.00\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/proveedor",
+              "protocol": "https",
+              "host": [
+                "supplier-hub-api-fha8daf4g7gzdhag",
+                "spaincentral-01",
+                "azurewebsites",
+                "net"
+              ],
+              "path": [
+                "api",
+                "proveedor"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 04 Feb 2026 15:19:09 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "Location",
+              "value": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/Proveedor/11"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 11,\n    \"razonSocial\": \"GRIB DIAMONDS\",\n    \"nombreComercial\": \"Grib Diamonds\",\n    \"identificacionTributaria\": \"56789012345\",\n    \"numeroTelefonico\": \"+32 3 123 4567\",\n    \"correoElectronico\": \"contact@gribdiamonds.com\",\n    \"sitioWeb\": \"https://www.gribdiamonds.com\",\n    \"direccionFisica\": \"Schupstraat 21\",\n    \"pais\": \"Belgium\",\n    \"facturacionAnual\": 10000000,\n    \"fechaUltimaEdicion\": \"2026-02-04T15:19:09.6096047Z\",\n    \"activo\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "GET all countries",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/helper/paises",
+          "protocol": "https",
+          "host": [
+            "supplier-hub-api-fha8daf4g7gzdhag",
+            "spaincentral-01",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "helper",
+            "paises"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GET all countries",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/helper/paises",
+              "protocol": "https",
+              "host": [
+                "supplier-hub-api-fha8daf4g7gzdhag",
+                "spaincentral-01",
+                "azurewebsites",
+                "net"
+              ],
+              "path": [
+                "api",
+                "helper",
+                "paises"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 04 Feb 2026 15:58:04 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    \"Andorra\",\n    \"Trinidad and Tobago\",\n    \"Serbia\",\n    \"United Kingdom\",\n    \"Russia\",\n    \"Hong Kong\",\n    \"Western Sahara\",\n    \"Uruguay\",\n    \"Barbados\",\n    \"Palestine\",\n    \"Mexico\",\n    \"Malawi\",\n    \"Antarctica\",\n    \"New Caledonia\",\n    \"Svalbard and Jan Mayen\",\n    \"Norfolk Island\",\n    \"Christmas Island\",\n    \"Mongolia\",\n    \"Latvia\",\n    \"Brunei\",\n    \"Ukraine\",\n    \"North Korea\",\n    \"Finland\",\n    \"Anguilla\",\n    \"Azerbaijan\",\n    \"Cayman Islands\",\n    \"Uzbekistan\",\n    \"Ireland\",\n    \"Jersey\",\n    \"Rwanda\",\n    \"Bosnia and Herzegovina\",\n    \"Poland\",\n    \"Portugal\",\n    \"Haiti\",\n    \"Iran\",\n    \"French Southern and Antarctic Lands\",\n    \"Ethiopia\",\n    \"Kazakhstan\",\n    \"Mali\",\n    \"Nicaragua\",\n    \"Germany\",\n    \"Estonia\",\n    \"Tunisia\",\n    \"Saint Martin\",\n    \"Cameroon\",\n    \"Micronesia\",\n    \"Sint Maarten\",\n    \"Cyprus\",\n    \"Morocco\",\n    \"Pitcairn Islands\",\n    \"Curaçao\",\n    \"Aruba\",\n    \"Spain\",\n    \"Gabon\",\n    \"Åland Islands\",\n    \"Denmark\",\n    \"Martinique\",\n    \"Antigua and Barbuda\",\n    \"Eswatini\",\n    \"Taiwan\",\n    \"Vanuatu\",\n    \"Cook Islands\",\n    \"Cocos (Keeling) Islands\",\n    \"Cape Verde\",\n    \"Belarus\",\n    \"Czechia\",\n    \"Peru\",\n    \"Timor-Leste\",\n    \"Namibia\",\n    \"Tokelau\",\n    \"DR Congo\",\n    \"Saint Lucia\",\n    \"Suriname\",\n    \"Burundi\",\n    \"Georgia\",\n    \"Ghana\",\n    \"British Indian Ocean Territory\",\n    \"Egypt\",\n    \"French Guiana\",\n    \"Marshall Islands\",\n    \"Guinea-Bissau\",\n    \"Fiji\",\n    \"Zambia\",\n    \"Iceland\",\n    \"Bermuda\",\n    \"Brazil\",\n    \"Palau\",\n    \"Sudan\",\n    \"Australia\",\n    \"Cambodia\",\n    \"New Zealand\",\n    \"Philippines\",\n    \"Burkina Faso\",\n    \"Faroe Islands\",\n    \"Sierra Leone\",\n    \"Grenada\",\n    \"Bolivia\",\n    \"Switzerland\",\n    \"Saint Vincent and the Grenadines\",\n    \"Ecuador\",\n    \"Seychelles\",\n    \"South Africa\",\n    \"India\",\n    \"Liberia\",\n    \"South Korea\",\n    \"Lithuania\",\n    \"Singapore\",\n    \"Puerto Rico\",\n    \"Belize\",\n    \"Netherlands\",\n    \"Eritrea\",\n    \"Montserrat\",\n    \"Réunion\",\n    \"South Georgia\",\n    \"Bangladesh\",\n    \"Yemen\",\n    \"Norway\",\n    \"Slovenia\",\n    \"Oman\",\n    \"Mozambique\",\n    \"Libya\",\n    \"Chad\",\n    \"Guyana\",\n    \"Kyrgyzstan\",\n    \"Djibouti\",\n    \"Northern Mariana Islands\",\n    \"United States\",\n    \"Togo\",\n    \"Sri Lanka\",\n    \"Comoros\",\n    \"Cuba\",\n    \"Guam\",\n    \"Argentina\",\n    \"Wallis and Futuna\",\n    \"Bhutan\",\n    \"Lebanon\",\n    \"Heard Island and McDonald Islands\",\n    \"Lesotho\",\n    \"Somalia\",\n    \"Dominica\",\n    \"Hungary\",\n    \"Luxembourg\",\n    \"San Marino\",\n    \"Afghanistan\",\n    \"Mauritania\",\n    \"Algeria\",\n    \"Guadeloupe\",\n    \"Croatia\",\n    \"Bulgaria\",\n    \"Niue\",\n    \"Indonesia\",\n    \"Belgium\",\n    \"Nauru\",\n    \"French Polynesia\",\n    \"Iraq\",\n    \"Madagascar\",\n    \"Vietnam\",\n    \"Mauritius\",\n    \"American Samoa\",\n    \"Ivory Coast\",\n    \"Caribbean Netherlands\",\n    \"Liechtenstein\",\n    \"Italy\",\n    \"Saint Kitts and Nevis\",\n    \"Qatar\",\n    \"Turkey\",\n    \"United States Virgin Islands\",\n    \"Angola\",\n    \"Kenya\",\n    \"Saudi Arabia\",\n    \"South Sudan\",\n    \"Turks and Caicos Islands\",\n    \"Canada\",\n    \"Niger\",\n    \"Gibraltar\",\n    \"Kuwait\",\n    \"Venezuela\",\n    \"Gambia\",\n    \"Paraguay\",\n    \"Chile\",\n    \"North Macedonia\",\n    \"Macau\",\n    \"Armenia\",\n    \"Botswana\",\n    \"Nepal\",\n    \"São Tomé and Príncipe\",\n    \"Benin\",\n    \"Solomon Islands\",\n    \"Guinea\",\n    \"Mayotte\",\n    \"Greenland\",\n    \"Monaco\",\n    \"Pakistan\",\n    \"Malaysia\",\n    \"Kosovo\",\n    \"Moldova\",\n    \"Tuvalu\",\n    \"Saint Pierre and Miquelon\",\n    \"Senegal\",\n    \"Panama\",\n    \"Malta\",\n    \"Uganda\",\n    \"Albania\",\n    \"United Arab Emirates\",\n    \"Costa Rica\",\n    \"Saint Barthélemy\",\n    \"Saint Helena, Ascension and Tristan da Cunha\",\n    \"Israel\",\n    \"Austria\",\n    \"Laos\",\n    \"France\",\n    \"Papua New Guinea\",\n    \"Dominican Republic\",\n    \"Tonga\",\n    \"Jamaica\",\n    \"Bouvet Island\",\n    \"Slovakia\",\n    \"Kiribati\",\n    \"Jordan\",\n    \"Maldives\",\n    \"Montenegro\",\n    \"Japan\",\n    \"El Salvador\",\n    \"Colombia\",\n    \"Zimbabwe\",\n    \"Equatorial Guinea\",\n    \"China\",\n    \"Honduras\",\n    \"Isle of Man\",\n    \"Republic of the Congo\",\n    \"Myanmar\",\n    \"Greece\",\n    \"Samoa\",\n    \"Falkland Islands\",\n    \"Tanzania\",\n    \"Central African Republic\",\n    \"Romania\",\n    \"United States Minor Outlying Islands\",\n    \"Tajikistan\",\n    \"Bahamas\",\n    \"Nigeria\",\n    \"Vatican City\",\n    \"Bahrain\",\n    \"Thailand\",\n    \"Sweden\",\n    \"British Virgin Islands\",\n    \"Guernsey\",\n    \"Guatemala\",\n    \"Syria\",\n    \"Turkmenistan\"\n]"
+        }
+      ]
+    },
+    {
+      "name": "DELETE supplier",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/proveedor/9",
+          "protocol": "https",
+          "host": [
+            "supplier-hub-api-fha8daf4g7gzdhag",
+            "spaincentral-01",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "proveedor",
+            "9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET supplier by id",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "GET supplier by id",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/proveedor/8",
+              "protocol": "https",
+              "host": [
+                "supplier-hub-api-fha8daf4g7gzdhag",
+                "spaincentral-01",
+                "azurewebsites",
+                "net"
+              ],
+              "path": [
+                "api",
+                "proveedor",
+                "8"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 04 Feb 2026 16:10:57 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 8,\n    \"razonSocial\": \"Constructor Development Limited\",\n    \"nombreComercial\": \"Constructor Development\",\n    \"identificacionTributaria\": \"12345678901\",\n    \"numeroTelefonico\": \"+1 284 123 4567\",\n    \"correoElectronico\": \"contacto@constructor.com\",\n    \"sitioWeb\": \"https://www.constructor.com\",\n    \"direccionFisica\": \"British Virgin Islands\",\n    \"pais\": \"British Virgin Islands\",\n    \"facturacionAnual\": 15000000,\n    \"fechaUltimaEdicion\": \"2026-02-04T15:17:56.2313067\",\n    \"activo\": true\n}"
+        },
+        {
+          "name": "GET supplier by id",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/proveedor/2",
+              "protocol": "https",
+              "host": [
+                "supplier-hub-api-fha8daf4g7gzdhag",
+                "spaincentral-01",
+                "azurewebsites",
+                "net"
+              ],
+              "path": [
+                "api",
+                "proveedor",
+                "2"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 04 Feb 2026 16:11:26 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Microsoft-IIS/10.0"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "ASP.NET"
+            }
+          ],
+          "cookie": [],
+          "body": "Proveedor inactivo"
+        }
+      ]
+    }
+  ]
+}
