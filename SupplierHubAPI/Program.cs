@@ -41,14 +41,14 @@ var app = builder.Build();
 // Configurar el pipeline de la app
 app.UseAuthorization();
 
-// Usar ambas políticas CORS
+// Usar la política CORS correctamente
 app.UseCors(policy =>
 {
-    policy.AllowAnyOrigin();  // Permite todas las solicitudes durante el desarrollo
-    policy.WithOrigins("http://localhost:5173", "https://supplier-hub-front.vercel.app")
-          .AllowAnyMethod()
-          .AllowAnyHeader();
+    policy.WithOrigins("http://localhost:5173", "https://supplier-hub-front.vercel.app") // Orígenes específicos permitidos
+          .AllowAnyMethod()  // Permitir todos los métodos HTTP (GET, POST, etc.)
+          .AllowAnyHeader(); // Permitir todos los encabezados
 });
+
 
 app.MapControllers();
 
