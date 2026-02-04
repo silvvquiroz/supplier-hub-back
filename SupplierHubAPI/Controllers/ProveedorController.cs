@@ -85,21 +85,6 @@ namespace SupplierHubAPI.Controllers
             return proveedor;
         }
 
-        // GET: api/Proveedor/entity
-        [HttpGet("{name}")]
-        public async Task<ActionResult<Proveedor>> GetProveedor(string name)
-        {
-            var proveedor = await _context.Proveedores.FirstOrDefaultAsync(p => p.RazonSocial.Contains(name));
-            if (proveedor == null)
-            {
-                return NotFound();
-            }
-            if (!proveedor.Activo) {
-                return NotFound("Proveedor inactivo");
-            }
-
-            return proveedor;
-        }
 
         // POST: api/Proveedor
         [HttpPost]
