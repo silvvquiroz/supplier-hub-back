@@ -20,6 +20,14 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod()  // Permitir todos los métodos HTTP (GET, POST, etc.)
               .AllowAnyHeader(); // Permitir todos los encabezados
     });
+
+    // Política para el entorno local
+    options.AddPolicy("AllowLocal", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173")  // Cambia esto por tu URL local
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
 });
 
 // Configurar la API externa para las consultas a las listas de riesgo
@@ -33,8 +41,14 @@ var app = builder.Build();
 // Configurar el pipeline de la app
 app.UseAuthorization();
 
-// Usar la política CORS
-app.UseCors("AllowVercel");
+// Usar ambas políticas CORS
+app.UseCors(policy =>
+{
+    policy.AllowAnyOrigin();  // Permite todas las solicitudes durante el desarrollo
+    policy.WithOrigins("http://localhost:5173", "https://supplier-hub-front.vercel.app")
+          .AllowAnyMethod()
+          .AllowAnyHeader();
+});
 
 app.MapControllers();
 
