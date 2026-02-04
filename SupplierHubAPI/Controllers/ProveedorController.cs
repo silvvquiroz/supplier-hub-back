@@ -87,7 +87,7 @@ namespace SupplierHubAPI.Controllers
 
 
         // GET: api/Proveedor/count
-        [HttpGet("/count")]
+        [HttpGet("count")]
         public async Task<ActionResult<int>> GetCount()
         {
             var count = await _context.Proveedores.CountAsync(p => p.Activo);
