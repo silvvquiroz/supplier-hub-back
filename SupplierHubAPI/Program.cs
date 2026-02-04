@@ -10,6 +10,18 @@ var dbConnectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRIN
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(dbConnectionString));
 
+// Agregar servicios CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowVercel", policy =>
+    {
+        // Permitir solicitudes desde tu dominio en Vercel
+        policy.WithOrigins("https://supplier-hub-front.vercel.app")  // Cambia esto por tu dominio de Vercel
+              .AllowAnyMethod()  // Permitir todos los métodos HTTP (GET, POST, etc.)
+              .AllowAnyHeader(); // Permitir todos los encabezados
+    });
+});
+
 // Configurar la API externa para las consultas a las listas de riesgo
 builder.Services.AddControllers();
 builder.Services.AddHttpClient("ExternalApi", client =>{
