@@ -194,7 +194,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "  {\n    \"razonSocial\": \"TREN DE ARAGUA\",\n    \"nombreComercial\": \"Tren de Aragua\",\n    \"identificacionTributaria\": \"67890123456\",\n    \"numeroTelefonico\": \"+591 2 123 4567\",\n    \"correoElectronico\": \"info@trendearagua.com\",\n    \"sitioWeb\": \"https://www.trendearagua.com\",\n    \"pais\": \"Bolivia\",\n    \"facturacionAnual\": 5000000.00\n  }\n",
+          "raw": "{\n    \"razonSocial\": \"GRIB DIAMONDS\",\n    \"nombreComercial\": \"Grib Diamonds\",\n    \"identificacionTributaria\": \"56789012345\",\n    \"numeroTelefonico\": \"+32 3 123 4567\",\n    \"correoElectronico\": \"contact@gribdiamonds.com\",\n    \"sitioWeb\": \"https://www.gribdiamonds.com\",\n    \"direccionFisica\": \"Schupstraat 21\",\n    \"pais\": \"Belgium\",\n    \"facturacionAnual\": 10000000.00\n  }",
           "options": {
             "raw": {
               "language": "json"
@@ -388,7 +388,22 @@
       "name": "GET supplier by id",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "https://supplier-hub-api-fha8daf4g7gzdhag.spaincentral-01.azurewebsites.net/api/proveedor/8",
+          "protocol": "https",
+          "host": [
+            "supplier-hub-api-fha8daf4g7gzdhag",
+            "spaincentral-01",
+            "azurewebsites",
+            "net"
+          ],
+          "path": [
+            "api",
+            "proveedor",
+            "8"
+          ]
+        }
       },
       "response": [
         {
