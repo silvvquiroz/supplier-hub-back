@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SupplierHubAPI.Models;
+using Newtonsoft.Json;
 
 namespace SupplierHubAPI.Controllers
 {
@@ -9,17 +10,21 @@ namespace SupplierHubAPI.Controllers
     public class ProveedorController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public ProveedorController(ApplicationDbContext context)
+        public ProveedorController(ApplicationDbContext context, IHttpClientFactory httpClientFactory)
         {
             _context = context;
+            _httpClientFactory = httpClientFactory;
         }
 
         // GET: api/Proveedor
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Proveedor>>> GetProveedores()
         {
-            return await _context.Proveedores.ToListAsync();
+            var proveedoresActivos = await _context.Proveedores.Where(p => p.Activo).ToListAsync();
+
+            return proveedoresActivos;
         }
 
         // GET: api/Proveedor/5
@@ -32,6 +37,9 @@ namespace SupplierHubAPI.Controllers
             {
                 return NotFound();
             }
+            if (!proveedor.Activo) {
+                return NotFound("Proveedor inactivo");
+            }
 
             return proveedor;
         }
@@ -40,6 +48,18 @@ namespace SupplierHubAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Proveedor>> PostProveedor(Proveedor proveedor)
         {
+
+            // Establecer valores predeterminados
+            proveedor.Activo = true; 
+            proveedor.FechaUltimaEdicion = DateTime.UtcNow;  
+
+
+            // Verificar las validaciones del Model
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             _context.Proveedores.Add(proveedor);
             await _context.SaveChangesAsync();
 
@@ -54,6 +74,23 @@ namespace SupplierHubAPI.Controllers
             {
                 return BadRequest();
             }
+
+            // Verificar las validaciones del Model
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            // Desvincular la instancia actual del proveedor en el contexto
+            // y validar si e proveedor realmente existe
+            var existingProveedor = await _context.Proveedores.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
+
+            if (existingProveedor == null) {
+                return NotFound("Proveedor no encontrado.");
+            }
+
+            // Actualizar la fecha de última modificación
+            proveedor.FechaUltimaEdicion = DateTime.UtcNow;
 
             _context.Entry(proveedor).State = EntityState.Modified;
 
@@ -86,10 +123,86 @@ namespace SupplierHubAPI.Controllers
                 return NotFound();
             }
 
-            _context.Proveedores.Remove(proveedor);
+            // Cambiar el estado de Activo a false (eliminado lógico)
+            proveedor.Activo = false;
+
+            // Actualizar la fecha de última modificación
+            proveedor.FechaUltimaEdicion = DateTime.UtcNow;
+
+            // Actualizar el proveedor en la BD
+            _context.Entry(proveedor).State = EntityState.Modified;
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
+
+        [HttpGet("external/offshore/{entityName}")]
+        public async Task<ActionResult> GetOffShoreData(string entityName) {
+            var client = _httpClientFactory.CreateClient("ExternalApi");
+
+            try
+            {
+                // Usar la BaseAddress configurada en Program.cs
+                var offshoreUrl = $"offshore?entity={entityName}";
+                var response = await client.GetAsync(offshoreUrl);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    return StatusCode((int)response.StatusCode, "Error al obtener los datos de offshore.");
+                }
+
+                // Leer la respuesta de la API externa
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+
+                // Deserializar la respuesta en la clase ScrapXResponse con el tipo específico (OffshoreResult)
+                var apiResponse = JsonConvert.DeserializeObject<ScrapXResponse<OffShoreResult>>(jsonResponse);
+
+                return Ok(apiResponse);
+            }
+            catch (HttpRequestException httpEx)
+            {
+                return StatusCode(500, $"Error de conexión a la API externa: {httpEx.Message}");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Ocurrió un error inesperado: {ex.Message}");
+            }
+        }
+
+        [HttpGet("external/ofac/{entityName}")]
+        public async Task<ActionResult> GetOfacData(string entityName)
+        {
+            var client = _httpClientFactory.CreateClient("ExternalApi");
+
+            try
+            {
+                // Usar la BaseAddress configurada en Program.cs
+                var ofacUrl = $"ofac?entity={entityName}&score=100";
+                var response = await client.GetAsync(ofacUrl);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    return StatusCode((int)response.StatusCode, "Error al obtener los datos de OFAC.");
+                }
+
+                // Leer la respuesta de la API de ScrapX
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+
+                // Deserializar la respuesta en la clase ScrapXResponse con el tipo específico (OfacResult)
+                var apiResponse = JsonConvert.DeserializeObject<ScrapXResponse<OfacResult>>(jsonResponse);
+
+                return Ok(apiResponse);
+            }
+            catch (HttpRequestException httpEx)
+            {
+                return StatusCode(500, $"Error de conexión a la API externa: {httpEx.Message}");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Ocurrió un error inesperado: {ex.Message}");
+            }
+        }
+
+
     }
 }
