@@ -1,5 +1,6 @@
 namespace SupplierHubAPI.Models
 {
+    // Modelo de resultado de la consulta a Ofac
     public class OfacResult 
     {
         public string Name { get; set; }
