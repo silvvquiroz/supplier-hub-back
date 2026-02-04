@@ -3153,19 +3153,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\squiroz.PCI\\.nuget\\packages\\": {}
+    "/Users/silvv/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repositorios\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj",
+      "projectUniqueName": "/Users/silvv/repos/supplier-hub-back/SupplierHubAPI/SupplierHubAPI.csproj",
       "projectName": "SupplierHubAPI",
-      "projectPath": "C:\\Repositorios\\supplier-hub-back\\SupplierHubAPI\\SupplierHubAPI.csproj",
-      "packagesPath": "C:\\Users\\squiroz.PCI\\.nuget\\packages\\",
-      "outputPath": "C:\\Repositorios\\supplier-hub-back\\SupplierHubAPI\\obj\\",
+      "projectPath": "/Users/silvv/repos/supplier-hub-back/SupplierHubAPI/SupplierHubAPI.csproj",
+      "packagesPath": "/Users/silvv/.nuget/packages/",
+      "outputPath": "/Users/silvv/repos/supplier-hub-back/SupplierHubAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\squiroz.PCI\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/silvv/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -3233,7 +3233,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

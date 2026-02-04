@@ -33,6 +33,9 @@ var app = builder.Build();
 // Configurar el pipeline de la app
 app.UseAuthorization();
 
+// Usar la política CORS
+app.UseCors("AllowVercel");
+
 app.MapControllers();
 
 app.Run();
